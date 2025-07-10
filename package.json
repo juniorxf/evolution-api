@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc --noEmit && tsup",
     "start": "tsnd -r tsconfig-paths/register --files --transpile-only ./src/main.ts",
-    "start:prod": "node --max-old-space-size=512 dist/main",
+    "start:prod": "node dist/main",
     "dev:server": "tsnd -r tsconfig-paths/register --files --transpile-only --respawn --ignore-watch node_modules ./src/main.ts",
     "test": "tsnd -r tsconfig-paths/register --files --transpile-only --respawn --ignore-watch node_modules ./test/all.test.ts",
     "lint": "eslint --fix --ext .ts src",
@@ -48,6 +48,9 @@
     "url": "https://github.com/EvolutionAPI/evolution-api/issues"
   },
   "homepage": "https://github.com/EvolutionAPI/evolution-api#readme",
+  "overrides": {
+    "axios": "^1.7.9"
+  },
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
     "@aws-sdk/client-sqs": "^3.723.0",
@@ -73,7 +76,7 @@
     "form-data": "^4.0.1",
     "https-proxy-agent": "^7.0.6",
     "i18next": "^23.7.19",
-    "jimp": "^0.16.13",
+    "jimp": "^1.6.0",
     "json-schema": "^0.4.0",
     "jsonschema": "^1.4.1",
     "jsonwebtoken": "^9.0.2",
@@ -95,7 +98,7 @@
     "qrcode": "^1.5.4",
     "qrcode-terminal": "^0.12.0",
     "redis": "^4.7.0",
-    "sharp": "^0.32.6",
+    "sharp": "^0.34.2",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
     "tsup": "^8.3.5"
